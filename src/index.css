@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;450;500;600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+:root {
+  --background: #0C0E13;
+  --foreground: #ECEBE4;
+  --card: #13161F;
+  --card-foreground: #ECEBE4;
+  --popover: #1A1E29;
+  --popover-foreground: #ECEBE4;
+  --primary: #FFB020;
+  --primary-foreground: #0C0E13;
+  --secondary: #1A1E29;
+  --secondary-foreground: #ECEBE4;
+  --muted: #1A1E29;
+  --muted-foreground: #868294;
+  --accent: rgba(255, 176, 32, 0.12);
+  --accent-foreground: #FFB020;
+  --destructive: #E5484D;
+  --destructive-foreground: #ECEBE4;
+  --border: #262C39;
+  --input: #262C39;
+  --ring: #FFB020;
+  --radius: 0.875rem;
+
+  /* extended palette specific to this app's dark/amber aesthetic */
+  --panel-hi: #1A1E29;
+  --line-soft: #1E2430;
+  --text-muted-dim: #5B5866;
+  --amber: #FFB020;
+  --amber-hi: #FFC754;
+  --amber-soft: rgba(255, 176, 32, 0.12);
+  --amber-line: rgba(255, 176, 32, 0.28);
+
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --display: 'Space Grotesk', sans-serif;
+  --body: 'Inter', sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-panel-hi: var(--panel-hi);
+  --color-line-soft: var(--line-soft);
+  --color-text-muted-dim: var(--text-muted-dim);
+  --color-amber: var(--amber);
+  --color-amber-hi: var(--amber-hi);
+  --color-amber-soft: var(--amber-soft);
+  --color-amber-line: var(--amber-line);
+
+  --font-mono: var(--mono);
+  --font-display: var(--display);
+  --font-sans: var(--body);
+
+  --radius-sm: calc(var(--radius) * 0.55);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.3);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100vh;
+  }
+}
